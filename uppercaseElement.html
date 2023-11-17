@@ -1,0 +1,17 @@
+<!doctype html>
+<body>
+<script>
+class UpperCase extends HTMLElement{
+
+	connectedCallback(){
+	this.innerHTML = this.getAttribute("value").toUpperCase();
+}
+}
+customElements.define("upper-case", UpperCase);
+
+</script>
+<p>Paragraph text</p>
+
+<upper-case value="it should be uppercase."></upper-case>
+
+</body>
